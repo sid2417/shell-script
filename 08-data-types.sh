@@ -13,4 +13,4 @@ SUM=$(($Num1+$Num2))
 # Before condition we need to mention $ then only it is considered as Dolar
 # like $((mention the condition))
 
-echo "Here we are adding two numbers total sum is : $Sum"
+echo "Here we are adding two numbers total sum is : $SUM"
