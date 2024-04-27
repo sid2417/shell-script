@@ -15,7 +15,7 @@
 
 NUMBER=$1
 
-if [$NUMBER -gt 10]     #For condition use this bracess   if[]
+if [ $NUMBER -gt 10 ]     #For condition use this bracess   if[]
 then
     echo "The Entered number  $NUMBER is greaterthan 10"
 
