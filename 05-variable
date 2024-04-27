@@ -1,0 +1,16 @@
+#!/bin/bash/
+
+# we write the program for username and password
+#(read)-->this command requesting the user to enter the username/value
+
+
+echo "Please Enter Your UserName"
+
+read Username
+
+
+echo "Please Enter Your Password"
+
+read Password
+
+echo "the UserName is:: $Username, and the Password is ::$Password"
