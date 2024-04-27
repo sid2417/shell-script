@@ -13,4 +13,4 @@ echo "Please Enter Your Password"
 
 read Password
 
-echo "the UserName is:: $Username, and the Password is ::$Password"
+echo "the UserName is:: Username, and the Password is ::Password"
