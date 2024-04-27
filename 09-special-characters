@@ -2,18 +2,15 @@
 
 echo "Printing Everything : $@"
 echo "Number of arguments you are passing : $#"
+echo "This is current working directory : $PWD"
 echo "Which user is using this : $USER"
 echo "Current server name : $HOSTNAME"
 echo "This is home directory : $HOME"
 echo "This is current file name : $0"
-echo "This is showing process id (PID): $$"
-echo "This is current working directory : $PWD"
+echo "This is showing process id of current shell script program (PID): $$"
+sleep 60
+echo "Process id of last background command : $!"
 
+# ($$) ---> frontend
+# ($!)--->Background
 
-10 20 30
-3
-ec2-user
-ip-172-31-29-171.ec2.internal
-09-special-characters
-2853
-/home/ec2-user/shell-script
