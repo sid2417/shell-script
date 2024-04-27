@@ -1,9 +1,13 @@
 #!/bin/bash/
 
 #Declaring variable
-Person1=Yoga       ###Here no space between variable=value
-Person2=Exercise  
+Person1=$1       ###Here no space between variable=value
+Person2=$2  
 
+#Here $1 considered as first person
+#Here $2 considered as second person
+
+#while execute the srcipt you provide the names from outside like a arguments
 
 ## $ dollar is used for to identify the variable 
 ##Now you have to chage the value into any name
