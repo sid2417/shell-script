@@ -2,7 +2,7 @@
 
 ## Now we are discussing about conditions
 
-#   if(condition)            # after if inside the braces we called as condition
+#   if[condition]           # after if inside the braces we called as condition
 #       then
 #            echo "that condition is true print this statement"
 
@@ -15,7 +15,7 @@
 
 NUMBER=$1
 
-if ($NUMBER -gt 10)
+if [$NUMBER -gt 10]     #For condition use this bracess   if[]
 then
     echo "The Entered  $NUMBER is greaterthan 10"
 
