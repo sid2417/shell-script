@@ -13,10 +13,12 @@
 
 # Question:: Write the program which one is greaterthan
 
+# -gt -lt -eq -ge -le
+
 NUMBER=$1
 
 if [ $NUMBER -gt 10 ]     #For condition use this bracess   if[]
-then
+then                       #After this braces space is mandatory if [ condition ]
     echo "The Entered number  $NUMBER is greaterthan 10"
 
 else 
