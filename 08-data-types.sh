@@ -14,3 +14,5 @@ SUM=$(($Num1+$Num2))
 # like $((mention the condition))
 
 echo "Here we are adding two numbers total sum is : $SUM"
+
+echo "Here we are adding two numbers $Num1 + $Num2 total sum is : $SUM"
