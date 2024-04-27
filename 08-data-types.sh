@@ -6,4 +6,4 @@
 Num1=$1
 Num2=$2
 
-echo "Here we are adding two numbers total sum is : $(Sum=$Num1+$Num2)"
+echo "Here we are adding two numbers total sum is : $Sum=$Num1+$Num2"
