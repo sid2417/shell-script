@@ -16,3 +16,10 @@ SUM=$(($Num1+$Num2))
 echo "Here we are adding two numbers total sum is : $SUM"
 
 echo "Here we are adding two numbers $Num1 + $Num2 total sum is : $SUM"
+
+# if suppose you mention sh filename.sh 10 20 
+# above output is 10 + 20 = 30
+
+# if suppose you mention sh filename.sh 10 anystring
+# above output is 10 + 0= 10
+#Shell script considered string as Zero
