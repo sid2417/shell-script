@@ -12,7 +12,7 @@ MOVIES=("Avatar" "Inception" "Titanic")
 
 echo "First movie name is : ${MOVIES[0]}"
 
-echo "Second movie name is : ${MOVIES[1]}
+echo "Second movie name is : ${MOVIES[1]}"
 
 echo "Third movie name is : ${MOVIES[2]}"
 

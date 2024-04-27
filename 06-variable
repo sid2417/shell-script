@@ -4,6 +4,9 @@ echo "Please Enter Your UserName"
 
 read -s Username
 
+#Here (-s) is hidden your username and password for security purpose
+
+
 echo "Please Enter Your PassWord"
 
 read -s Password
