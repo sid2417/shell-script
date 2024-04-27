@@ -1,7 +1,9 @@
 #!/bin/bash/
 
-Person1=Happy
-Person2=Joy
+Person1=Yoga ###Here no space between variable=value
+Person2=Exercise
+
+## $ dollar is used for to identify the variable 
 
 echo "$Person1:: Hi $Person2, How are you"
 echo "$Person2:: Hello $Person1, am fine, where are you going"
