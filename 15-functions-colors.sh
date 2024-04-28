@@ -40,4 +40,7 @@ VALIDATE $? "YOUR mysql INSTALLATION :"
 dnf install git -y &>>$LOG_FILE
 VALIDATE $? "YOUT git INSTALLATION :"
 
+dnf install Docckker -y &>>$LOG_FILE
+VALIDATE $? "YOUT Docckker INSTALLATION :"
+
 echo "script is running successfully...ThankYou"
