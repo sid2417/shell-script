@@ -15,7 +15,7 @@ else
 fi
 
 #then install the packages
-dnf install mysqll -y
+dnf install mysql -y
 
 #and we need to chech those installation is success or not
 
