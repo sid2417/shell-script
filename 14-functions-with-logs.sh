@@ -2,9 +2,11 @@
 
 # Now we are using functions with logs and timestamp
 
-logs
+
 TIMESTAMP=$((date +%F-%M-%H-%S))
-folder=/tmp/
+FILE-NAME=$((echo "$0" | cut -d "."))
+FOLDER=/tmp/($FILE-NAME-$TIMESTAMP.log)
+
 
 USERID=$(id -u)
 if [ $USERID -ne 0 ] 
@@ -29,10 +31,10 @@ fi
 
 }
 
-dnf install mysql -y
+dnf install mysql -y >>$TIMESTAMP
 VALIDATE $? "YOUR mysql INSTALLATION :"
 
-dnf install git -y
+dnf install git -y >>$TIMESTAMPSSS
 VALIDATE $? "YOUT git INSTALLATION :"
 
 echo "script is running successfully...ThankYou"
