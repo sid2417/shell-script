@@ -12,7 +12,7 @@ fi
 #date
 
 TIMESTAMP=$(date +%F-%H-%M-%S)
-FILE_NAME=$((echo "$0" | cut -d "." -f1))
+FILE_NAME=$(echo "$0" | cut -d "." -f1)
 LOG_FILE=/tmp/$FILE_NAME-$TIMESTAMP.log
 R="\e[31m"
 G="\e[32m"
