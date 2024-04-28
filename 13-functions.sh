@@ -27,7 +27,7 @@ fi
 
 }
 
-dnf install mysqll -y
+dnf install mysql -y
 VALIDATE $? "YOUR mysql INSTALLATION :"
 
 dnf install git -y
