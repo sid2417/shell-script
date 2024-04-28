@@ -3,9 +3,9 @@
 # Now we are using functions with logs and timestamp
 
 
-TIMESTAMP=(date +%F-%M-%H-%S)
-FILE-NAME=$(("echo "$0" | cut -d "." -f1"))
-FOLDER=/tmp/($FILE-NAME-$TIMESTAMP.log)
+TIMESTAMP=$(date +%F-%H-%M-%S)
+SCRIPT_NAME=$("echo "$0" | cut -d "." -f1")
+LOG_FILE=/tmp/($SCRIPT_NAME-$TIMESTAMP.log)
 
 
 USERID=$(id -u)
@@ -31,10 +31,10 @@ fi
 
 }
 
-dnf install mysql -y >>$TIMESTAMP
+dnf install mysql -y &>>$LOG_FILE
 VALIDATE $? "YOUR mysql INSTALLATION :"
 
-dnf install git -y >>$TIMESTAMPSSS
+dnf install git -y &>>$LOG_FILE
 VALIDATE $? "YOUT git INSTALLATION :"
 
 echo "script is running successfully...ThankYou"
