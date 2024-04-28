@@ -17,7 +17,7 @@ else
 
 fi
 
-dnf install mysql-server -y   #Here -y is mandatory
+dnf installll mysql-server -y   #Here -y is mandatory
 
 
 if [ $? -ne 0 ]
