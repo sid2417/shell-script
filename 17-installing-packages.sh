@@ -10,7 +10,8 @@ else
     echo "You Have Sudo Access"
 fi
 #date
-TIMESTAMP=$(("date +%F-%H-%M-%S"))
+
+TIMESTAMP=$(date +%F-%H-%M-%S)
 FILE_NAME=$((echo "$0" | cut -d "." -f1))
 LOG_FILE=/tmp/$FILE_NAME-$TIMESTAMP.log
 R="\e[31m"
