@@ -47,4 +47,4 @@ do
 done
 
 
-echo "The Process is Going smoothly..ThankYou"
+echo "$G The Process is Going smoothly..ThankYou $N"
