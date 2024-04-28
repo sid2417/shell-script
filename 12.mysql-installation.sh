@@ -3,7 +3,7 @@
 
 VARIABLE=$(id -u)
 
-if ( $VARIABLE -nq 0 )
+if $(( $VARIABLE -nq 0 ))
 then 
     echo "Please provide the sudo access"
     # if it is not a super user we need to break
