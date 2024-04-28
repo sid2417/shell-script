@@ -18,32 +18,8 @@ R="\e[31m"
 G="\e[32m"
 N="\e[0m"
 
-ALREADY_IN_LIST=dnf list installed 
-INSTALL=dnf install 
-
 for i in $@
 do 
     echo "The current package Name is : $i"
-    if [ $i -ne $ALREADY_IN_LIST $i]
-    then 
-        echo "This package $i is Not Installed"
-        VALIDATE $? INSTALL
-    else    
-        echo "This package $i is Already Installed, now we are SKIPPING"
-    fi
+    
 done
-
-VALIDATE()
-{
-    if [ $1 -ne 0 ]
-    then    
-        echo "$INSTALL $i"
-    else 
-        echo "IT IS ALREADY INSTALLED"
-    fi
-}
-
-
-
-
-
