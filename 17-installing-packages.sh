@@ -42,4 +42,3 @@ VALIDATE ()
     else    
         echo "$1i Installation was SUCCESSFULL"
 }
-
