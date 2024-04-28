@@ -19,23 +19,19 @@ VALIDATE()
 
 if [ $1 -ne 0 ]
 then
-    echo "INSTALLATION WAS FAILED"
+    echo "$2 ...FAILED"
     exit 1
 else
-    echo $2
+    echo "$2 ... SUCCESS"
 fi
 
 }
 
-#then install the packages
 dnf install mysql -y
-
-#and we need to chech those installation is success or not
-VALIDATE $? "YOUR INSTALLATION WAS SUCCESS"
+VALIDATE $? "YOUR mysql INSTALLATION :"
 
 dnf install git -y
-
-VALIDATE $? "YOUR INSTALLATION WAS SUCCESS"
+VALIDATE $? "YOUT git INSTALLATION :"
 
 echo "script is running successfully...ThankYou"
 
