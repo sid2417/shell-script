@@ -1,10 +1,6 @@
 
 #!/bin/bash/
 
-
-
-$(conditoin)
-
 VARIABLE=$(id -u)
 
 if ( $VARIABLE -nq 0 )
