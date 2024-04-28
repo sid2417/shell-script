@@ -19,6 +19,15 @@ R="\e[31m"
 G="\e[32m"
 N="\e[0m"
 
+VALIDATE ()
+{
+    if [ $1 -ne 0 ]
+    then 
+        echo "$i Installation was FAILED"
+    else    
+        echo "$1i Installation was SUCCESSFULL"
+}
+
 for i in $@
 do 
     echo "The current package Name is : $i"
@@ -34,11 +43,3 @@ do
     fi
 done
 
-VALIDATE ()
-{
-    if [ $1 -ne 0 ]
-    then 
-        echo "$i Installation was FAILED"
-    else    
-        echo "$1i Installation was SUCCESSFULL"
-}
