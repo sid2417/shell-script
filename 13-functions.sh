@@ -15,7 +15,7 @@ else
 fi
 
 #then install the packages
-dnf install mysql -y
+dnf install mysqll -y
 
 #and we need to chech those installation is success or not
 
@@ -27,7 +27,7 @@ else
     echo "YOUR mysql INSTALLATION WAS SUCCESS"
 fi
 
-dnf install git -y
+dnf install gitt -y
 
 if  [ $? ne 0 ]
 then
