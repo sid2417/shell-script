@@ -19,7 +19,7 @@ dnf install mysqll -y
 
 #and we need to chech those installation is success or not
 
-if  [ $? ne 0 ]
+if [ $? ne 0 ]
 then
     echo "YOUR mysql INSTALLATION WAS FAILED"
     exit 1
@@ -29,7 +29,7 @@ fi
 
 dnf install gitt -y
 
-if  [ $? ne 0 ]
+if [ $? ne 0 ]
 then
     echo "YOUR git INSTALLATION WAS FAILED"
     exit 1
