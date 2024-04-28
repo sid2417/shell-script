@@ -17,30 +17,31 @@ FILE_NAME=$(echo "$0" | cut -d "." -f1)
 LOG_FILE=/tmp/$FILE_NAME-$TIMESTAMP.log
 R="\e[31m"
 G="\e[32m"
+Y="\e[33m"
 N="\e[0m"
 
 VALIDATE ()
 {
     if [ $1 -ne 0 ]
     then 
-        echo "$i Installation was FAILED"
+        echo -e "$i $R Installation was FAILED $N"
     else    
-        echo "$1i Installation was SUCCESSFULL"
+        echo "$i $G Installation was SUCCESSFULL $N"
     fi
 }
 
 for i in $@
 do 
-    echo "The current package Name is : $i"
+    echo "$Y The current package Name is $N: $i"
     dnf list installed $i
     if [ $? -ne 0 ]
     then    
-        echo "We Need to Install $i"
+        echo "$G We Need to Install $G $i "
         dnf install $i -y
         VALIDATE $? "Installation of $i"
         
     else
-        echo "$i is already Installed ...We skipped the Installation Process"
+        echo "$Y $i is already Installed ...We skipped the Installation Process $Y"
     fi
 done
 
