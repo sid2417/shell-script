@@ -17,7 +17,7 @@ else
 
 fi
 
-dnf installll mysql-server -y   #Here -y is mandatory
+dnf install mysql-server -y   #Here -y is mandatory
 
 
 if [ $? -ne 0 ]
@@ -28,3 +28,17 @@ else
    
     echo "Your installation is SUCCESS"
 fi
+
+
+dnf install git
+
+if [ $? -ne 0 ]
+then 
+    echo "Your Installaion was FAILED"
+    exit 1
+else
+    echo "Your Installaion was SUCCESS"
+
+fi
+
+echo "script is Proceeding...ThankYou"
