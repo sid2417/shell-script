@@ -14,10 +14,10 @@ fi
 
 dnf install mysql-server
 
-if ( $? -ne 0 )
+if [ $? -eq 0 ]
 then 
-    echo "Your installation is FAILED"
+    echo "Your installation is SUCCESS"
     #If it is successfully installed we need to break
 else
-    echo "Your installation is SUCCESS"
+    echo "Your installation is Failed"
 fi
