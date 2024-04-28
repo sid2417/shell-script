@@ -26,22 +26,22 @@ VALIDATE ()
     then 
         echo -e "$i $R Installation was FAILED $N"
     else    
-        echo "$i $G Installation was SUCCESSFULL $N"
+        echo -e "$i $G Installation was SUCCESSFULL $N"
     fi
 }
 
 for i in $@
 do 
-    echo "$Y The current package Name is $N: $i"
+    echo -e "$Y The current package Name is $N: $i"
     dnf list installed $i
     if [ $? -ne 0 ]
     then    
-        echo "$G We Need to Install $G $i "
+        echo -e "$G We Need to Install $G $i "
         dnf install $i -y
         VALIDATE $? "Installation of $i"
         
     else
-        echo "$Y $i is already Installed ...We skipped the Installation Process $Y"
+        echo -e "$Y $i is already Installed ...We skipped the Installation Process $Y"
     fi
 done
 
