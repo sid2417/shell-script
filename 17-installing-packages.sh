@@ -1,6 +1,7 @@
 #!/bin/bash/
 
 # Now we are installing multiple packages 
+# &>>$LOG_FILE
 #Sudo Access
 USERID=$((id -u))
 if [ $? -ne 0 ]
@@ -33,11 +34,11 @@ VALIDATE ()
 for i in $@
 do 
     echo -e "$Y The current package Name is $N: $i"
-    dnf list installed $i
+    dnf list installed $i &>>$LOG_FILE
     if [ $? -ne 0 ]
     then    
         echo -e "$G We Need to Install $G $i "
-        dnf install $i -y
+        dnf install $i -y &>>$LOG_FILE
         VALIDATE $? "Installation of $i"
         
     else
