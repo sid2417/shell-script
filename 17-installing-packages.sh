@@ -10,6 +10,7 @@ else
     echo "You Have Sudo Access"
 fi
 #date
+# xorg gcc fail2ban git mysql
 
 TIMESTAMP=$(date +%F-%H-%M-%S)
 FILE_NAME=$(echo "$0" | cut -d "." -f1)
