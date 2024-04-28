@@ -4,7 +4,7 @@
 
 
 TIMESTAMP=(date +%F-%M-%H-%S)
-FILE-NAME=$((echo "$0" | cut -d "."))
+FILE-NAME=$((echo "$0" | cut -d "." f1))
 FOLDER=/tmp/($FILE-NAME-$TIMESTAMP.log)
 
 
