@@ -31,7 +31,7 @@ fi
 
 }
 
-dnf install mysql -y &>>$LOG_FILE
+dnf install mysql -y &>>$LOG_FILE 
 VALIDATE $? "YOUR mysql INSTALLATION :"
 
 dnf install git -y &>>$LOG_FILE
