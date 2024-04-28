@@ -21,5 +21,24 @@ N="\e[0m"
 for i in $@
 do 
     echo "The current package Name is : $i"
-    
+    dnf list installed $i
+    if [ $? -ne 0 ]
+    then    
+        echo "We Need to Install $i"
+        dnf install $i -y
+        VALIDATE $? "Installation of $i"
+        
+    else
+        echo "$i is already Installed ...We skipped the Installation Process"
+    fi
 done
+
+VALIDATE ()
+{
+    if [ $1 -ne 0 ]
+    then 
+        echo "$i Installation was FAILED"
+    else    
+        echo "$1i Installation was SUCCESSFULL"
+}
+
