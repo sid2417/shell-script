@@ -26,6 +26,7 @@ VALIDATE ()
         echo "$i Installation was FAILED"
     else    
         echo "$1i Installation was SUCCESSFULL"
+    fi
 }
 
 for i in $@
