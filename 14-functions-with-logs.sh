@@ -3,7 +3,7 @@
 # Now we are using functions with logs and timestamp
 
 
-TIMESTAMP=$(("date +%F-%M-%H-%S"))
+TIMESTAMP=(date +%F-%M-%H-%S)
 FILE-NAME=$((echo "$0" | cut -d "."))
 FOLDER=/tmp/($FILE-NAME-$TIMESTAMP.log)
 
