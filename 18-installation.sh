@@ -15,6 +15,7 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
+
 #Timestamp #logfile   #chech list installed 
 #check installation was success/Failed
 
