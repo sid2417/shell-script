@@ -6,10 +6,10 @@
 USERID=$(id -u)
 if [ $USERID -ne 0 ]
 then 
-    echo "Please Provide Sudo Access"
+    echo -e " $Y Please Provide Sudo Access $N"
     exit 1
 else
-    echo "You Have Sudo Access"
+    echo -e " $G You Have Sudo Access $N"
 fi
 #date
 # xorg gcc fail2ban git mysql

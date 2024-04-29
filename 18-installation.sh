@@ -1,12 +1,16 @@
 #!/bin/bash/
 
 #sudo access 
-USER_ID=$(id -u)
-if [ $USER_ID -eq 0 ]
+
+
+
+USERID=$(id -u)
+if [ $USERID -ne 0 ]
 then 
-    echo -e " $G YOU ALREADY HAVE SUDO ACCESS $N "
+    echo "Please Provide Sudo Access"
+    exit 1
 else
-    echo -e "$Y PLEASE PROVIED SUDO ACCESS $N"
+    echo "You Have Sudo Access"
 fi
 
 #colors
