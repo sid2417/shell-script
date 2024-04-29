@@ -34,13 +34,13 @@ for i in $@
 do 
     ehco -e " $Y The installed Package Name is : $i $N"
     dnf list installed $i -y &>>$LOG_FILE
-    if [ $? -eq 0 ]
+    if [ $? -ne 0 ]
     then 
-        echo -e " $G $i was Already INSTALLED $N"
-    else 
         echo -e " $Y $i was NOT INSTALLED...Now we proceed to install $Y"
         dnf install $i -y &>>$LOG_FILE
         VALIDATE $? "$i package"
+    else 
+        echo -e " $G $i was Already INSTALLED $N"    
     fi
 done
 
