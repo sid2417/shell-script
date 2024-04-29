@@ -41,8 +41,6 @@ VALIDATE ()
         exit 1
     else
         echo -e " $G $2 SUCCESSFULLY INSTALLED $N" &>>$LOG_FILE
-        
-       
     fi
 }
 
