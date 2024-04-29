@@ -40,7 +40,7 @@ VALIDATE ()
 
 for i in $@
 do 
-    echo -e "$Y The current package Name is $N: $i"
+    echo -e "$Y The current package Name is : $N $i"
     dnf list installed $i &>>$LOG_FILE
     if [ $? -ne 0 ]
     then    
