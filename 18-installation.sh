@@ -23,17 +23,17 @@ fi
 VALIDATE ()
 {   if ($1 -ne 0)
     then
-        echo -e " $R $2 INSTALLATION WAS FAILED $N" &>>$LOG_FILE
+        echo -e " $R $2 INSTALLATION WAS FAILED $N" 
         exit 1
     else
-        echo -e " $G $2 SUCCESSFULLY INSTALLED $N" &>>$LOG_FILE
+        echo -e " $G $2 SUCCESSFULLY INSTALLED $N" 
     fi
 }
 
 for i in $@
 do 
     ehco -e " $Y The installed Package Name is : $i $N"
-    dnf list installed $i -y &>>$LOG_FILE
+    dnf list installed $i &>>$LOG_FILE
     if [ $? -ne 0 ]
     then 
         echo -e " $Y $i was NOT INSTALLED...Now we proceed to install $Y"
