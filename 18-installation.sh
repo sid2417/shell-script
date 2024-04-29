@@ -35,12 +35,14 @@ do
 done
 
 VALIDATE ()
-{   if ($1 -eq 0)
+{   if ($1 -ne 0)
     then
-        echo -e " $G $2 SUCCESSFULLY INSTALLED $N" &>>$LOG_FILE
-    else
         echo -e " $R $2 INSTALLATION WAS FAILED $N" &>>$LOG_FILE
         exit 1
+    else
+        echo -e " $G $2 SUCCESSFULLY INSTALLED $N" &>>$LOG_FILE
+        
+       
     fi
 }
 
