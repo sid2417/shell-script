@@ -34,8 +34,9 @@ do
     if [ $? -eq 0 ]
     then 
         echo -e "  $i $G was Already INSTALLED $N"    
-        #echo -e " $Y $i was NOT INSTALLED...Now we proceed to install $Y"    
+        
     else 
+        echo -e " $Y $i was NOT INSTALLED...Now we proceed to install $Y"    
         dnf install $i -y &>>$LOGFILE
         VALIDATE $? "$i package"
     fi
