@@ -10,7 +10,7 @@ then
     echo -e " $G Please Provide Sudo Access"
     exit 1
 else
-    echo -e " $Y You Have Sudo Access "
+    echo -e " $Y Already You Have Sudo Access "
 fi
 
 #colors
