@@ -15,10 +15,10 @@ N="\e[0m"
 VALIDATE ()
 {   if ($1 -ne 0)
     then
-        echo -e " $R $2 INSTALLATION WAS FAILED $N" 
+        echo -e " $2 $R  INSTALLATION WAS FAILED $N" 
         exit 1
     else
-        echo -e " $G $2 SUCCESSFULLY INSTALLED $N" 
+        echo -e " $2 $G  SUCCESSFULLY INSTALLED $N" 
     fi
 }
 
@@ -34,11 +34,11 @@ fi
 
 for i in $@
 do 
-    ehco -e " $Y The installed Package Name is : $i $N"
+    ehco -e " $Y The installed Package Name is $N: $i "
     dnf list installed $i &>>$LOG_FILE
     if [ $? -eq 0 ]
     then 
-        echo -e " $G $i was Already INSTALLED $N"    
+        echo -e "  $i $G was Already INSTALLED $N"    
         #echo -e " $Y $i was NOT INSTALLED...Now we proceed to install $Y"
         
         
