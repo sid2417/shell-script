@@ -6,7 +6,7 @@ if [ $USER_ID -eq 0 ]
 then 
     echo -e "$G YOU ALREADY HAVE SUDO ACCESS $N"
 else
-    echo "$Y PLEASE PROVIED SUDO ACCESS $N"
+    echo -e "$Y PLEASE PROVIED SUDO ACCESS $N"
 fi
 
 #colors
