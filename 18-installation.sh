@@ -12,7 +12,7 @@ SCRIPT_NAME=$(echo "$0" | cut -d "." -f1)
 LOG_FILE=/tmp/$TIME_STAMP-$LOG_FILE.log
 
 USER_ID=$(id -u)
-if [ $? -eq 0 ]
+if [ $USER_ID -eq 0 ]
     then 
     echo "YOU ALREADY HAVE SUDO ACCESS"
     else
