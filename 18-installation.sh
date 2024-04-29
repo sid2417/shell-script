@@ -25,11 +25,12 @@ do
     fi
 done
 
-VALIDATE 
+VALIDATE ()
 {   if ($1 -eq 0)
     then
         echo "$2 SUCCESSFULLY INSTALLED"
     else
         echo "$2 INSTALLATION WAS FAILED"
+    fi
 }
 
