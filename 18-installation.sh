@@ -19,7 +19,7 @@ VALIDATE (){
     fi
 }
 
-if [ $USER_ID -ne 0 ]
+if [ $USERID -ne 0 ]
     then 
         echo -e "$R PLEASE PROVIDE SUDO ACCESS $N "
         exit 1
