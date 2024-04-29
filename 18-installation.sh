@@ -10,7 +10,7 @@ Y="\e[33m"
 N="\e[0m"
 
 VALIDATE (){
-   if ( $1 -ne 0 )
+   if [ $1 -ne 0 ]
     then
         echo -e " $2 $R  INSTALLATION WAS FAILED $N" 
         exit 1
@@ -36,7 +36,7 @@ do
         echo -e "  $i $G was Already INSTALLED $N"    
         
     else 
-        echo -e " $Y $i was NOT INSTALLED...Now we proceed to install $Y"    
+        #echo -e " $Y $i was NOT INSTALLED...Now we proceed to install $Y"    
         dnf install $i -y &>>$LOGFILE
         VALIDATE $? "$i package"
     fi
