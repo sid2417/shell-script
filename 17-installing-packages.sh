@@ -3,7 +3,7 @@
 # Now we are installing multiple packages 
 # &>>$LOG_FILE
 #Sudo Access
-USERID=$((id -u))
+USERID=$(id -u)
 if [ $? -ne 0 ]
 then 
     echo "Please Provide Sudo Access"
