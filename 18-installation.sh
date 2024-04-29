@@ -7,10 +7,10 @@
 USERID=$(id -u)
 if [ $USERID -ne 0 ]
 then 
-    echo "Please Provide Sudo Access"
+    echo -e " $G Please Provide Sudo Access"
     exit 1
 else
-    echo "You Have Sudo Access"
+    echo -e " $Y You Have Sudo Access "
 fi
 
 #colors

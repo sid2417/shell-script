@@ -55,3 +55,4 @@ done
 
 
 echo -e "$G The Process is Going smoothly..ThankYou $N"
+echo -e "$G The Process is Going smoothly..ThankYou $N"
