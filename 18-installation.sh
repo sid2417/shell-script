@@ -22,7 +22,7 @@ do
         echo "$i was NOT INSTALLED...Now we proceed to install"
         dnf install $i -y
         VALIDATE $? "$i package"
-
+    fi
 done
 
 VALIDATE 
