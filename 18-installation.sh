@@ -14,21 +14,21 @@ LOG_FILE=/tmp/$TIME_STAMP-$LOG_FILE.log
 USER_ID=$(id -u)
 if [ $USER_ID -eq 0 ]
     then 
-    echo " $G YOU ALREADY HAVE SUDO ACCESS $N "
+    echo -e " $G YOU ALREADY HAVE SUDO ACCESS $N "
     else
-    echo "$R PLEASE PROVIDE SUDO ACCESS $N "
+    echo -e "$R PLEASE PROVIDE SUDO ACCESS $N "
     exit 1
 fi
 
 for i in $@
 do 
-    ehco " $Y The installed Package Name is : $i $N"
+    ehco -e " $Y The installed Package Name is : $i $N"
     dnf list installed $i -y
     if [ $? -eq 0 ]
     then 
-        echo " $G $i was Already INSTALLED $N"
+        echo -e " $G $i was Already INSTALLED $N"
     else 
-        echo " $Y $i was NOT INSTALLED...Now we proceed to install $Y"
+        echo -e " $Y $i was NOT INSTALLED...Now we proceed to install $Y"
         dnf install $i -y
         VALIDATE $? "$i package"
     fi
@@ -37,9 +37,9 @@ done
 VALIDATE ()
 {   if ($1 -eq 0)
     then
-        echo " $G $2 SUCCESSFULLY INSTALLED $N"
+        echo -e " $G $2 SUCCESSFULLY INSTALLED $N"
     else
-        echo " $R $2 INSTALLATION WAS FAILED $N"
+        echo -e " $R $2 INSTALLATION WAS FAILED $N"
         exit 1
     fi
 }
