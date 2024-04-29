@@ -6,12 +6,12 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 #Timestamp 
-TIME_STAMP=$("date +%F-%H-%M-%S")
+TIME_STAMP=$(("date +%F-%H-%M-%S"))
 #logfile  
 SCRIPT_NAME=$(echo "$0" | cut -d "." -f1)
 LOG_FILE=/tmp/$TIME_STAMP-$LOG_FILE.log
 
-for i in ($@)
+for i in $@
 do 
     ehco "The installed Package Name is : $i"
     dnf list installed $i -y
