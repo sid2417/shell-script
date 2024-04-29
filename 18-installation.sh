@@ -20,6 +20,16 @@ if [ $USER_ID -eq 0 ]
     exit 1
 fi
 
+VALIDATE ()
+{   if ($1 -ne 0)
+    then
+        echo -e " $R $2 INSTALLATION WAS FAILED $N" &>>$LOG_FILE
+        exit 1
+    else
+        echo -e " $G $2 SUCCESSFULLY INSTALLED $N" &>>$LOG_FILE
+    fi
+}
+
 for i in $@
 do 
     ehco -e " $Y The installed Package Name is : $i $N"
@@ -33,17 +43,5 @@ do
         VALIDATE $? "$i package"
     fi
 done
-
-VALIDATE ()
-{   if ($1 -ne 0)
-    then
-        echo -e " $R $2 INSTALLATION WAS FAILED $N" &>>$LOG_FILE
-        exit 1
-    else
-        echo -e " $G $2 SUCCESSFULLY INSTALLED $N" &>>$LOG_FILE
-    fi
-}
-
-
 
 echo -e "$G The Installation Process is Going smoothly..ThankYou $N"
