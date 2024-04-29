@@ -23,13 +23,13 @@ fi
 for i in $@
 do 
     ehco -e " $Y The installed Package Name is : $i $N"
-    dnf list installed $i -y
+    dnf list installed $i -y &>>$LOG_FILE
     if [ $? -eq 0 ]
     then 
         echo -e " $G $i was Already INSTALLED $N"
     else 
         echo -e " $Y $i was NOT INSTALLED...Now we proceed to install $Y"
-        dnf install $i -y
+        dnf install $i -y &>>$LOG_FILE
         VALIDATE $? "$i package"
     fi
 done
@@ -37,10 +37,13 @@ done
 VALIDATE ()
 {   if ($1 -eq 0)
     then
-        echo -e " $G $2 SUCCESSFULLY INSTALLED $N"
+        echo -e " $G $2 SUCCESSFULLY INSTALLED $N" &>>$LOG_FILE
     else
-        echo -e " $R $2 INSTALLATION WAS FAILED $N"
+        echo -e " $R $2 INSTALLATION WAS FAILED $N" &>>$LOG_FILE
         exit 1
     fi
 }
 
+
+
+echo -e "$G The Installation Process is Going smoothly..ThankYou $N"
