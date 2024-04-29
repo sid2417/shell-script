@@ -9,7 +9,7 @@ N="\e[0m"
 TIME_STAMP=$(date +%F-%H-%M-%S)
 #logfile  
 SCRIPT_NAME=$(echo "$0" | cut -d "." -f1)
-LOG_FILE=/tmp/$TIME_STAMP-$LOG_FILE.log
+LOG_FILE=/tmp/$TIME_STAMP-$SCRIPT_NAME.log
 
 USER_ID=$(id -u)
 if [ $USER_ID -eq 0 ]
