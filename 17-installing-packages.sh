@@ -3,7 +3,7 @@
 # Now we are installing multiple packages 
 # &>>$LOG_FILE
 #Sudo Access
-echo -e " $G welcome to the Installation $N"
+
 
 USERID=$(id -u)
 if [ $USERID -ne 0 ]
@@ -13,6 +13,9 @@ then
 else
     echo -e " $G You Have Sudo Access $N"
 fi
+
+echo -e " $G welcome to the Installation $N"
+
 #date
 # xorg gcc fail2ban git mysql
 
