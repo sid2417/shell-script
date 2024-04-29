@@ -1,19 +1,16 @@
 #!/bin/bash/
 
-USER_ID=$(id -u)
-TIME_STAMP=$(date +%F-%H-%M-%S)
-#logfile  
-SCRIPT_NAME=$(echo "$0" | cut -d "." -f1)
-LOG_FILE=/tmp/$TIME_STAMP-$SCRIPT_NAME.log
-#colors
+USERID=$(id -u)
+TIMESTAMP=$(date +%F-%H-%M-%S)
+SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
+LOGFILE=/tmp/$SCRIPT_NAME-$TIMESTAMP.log
 R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
-#Timestamp 
 
-VALIDATE ()
-{   if ($1 -ne 0)
+VALIDATE (){
+   if [ $1 -ne 0 ]
     then
         echo -e " $2 $R  INSTALLATION WAS FAILED $N" 
         exit 1
@@ -30,20 +27,16 @@ if [ $USER_ID -ne 0 ]
     echo -e " $G YOU ALREADY HAVE SUDO ACCESS $N "  
 fi
 
-
-
 for i in $@
 do 
     ehco -e " $Y The installed Package Name is $N: $i "
-    dnf list installed $i &>>$LOG_FILE
+    dnf list installed $i &>>$LOGFILE
     if [ $? -eq 0 ]
     then 
         echo -e "  $i $G was Already INSTALLED $N"    
-        #echo -e " $Y $i was NOT INSTALLED...Now we proceed to install $Y"
-        
-        
+        #echo -e " $Y $i was NOT INSTALLED...Now we proceed to install $Y"    
     else 
-        dnf install $i -y &>>$LOG_FILE
+        dnf install $i -y &>>$LOGFILE
         VALIDATE $? "$i package"
     fi
 done
