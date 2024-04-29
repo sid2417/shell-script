@@ -28,7 +28,9 @@ if [ $USERID -ne 0 ]
 fi
 
 for i in $@
-do  ehco -e " $Y The installed Package Name is $N: $i "
+do  
+    #ehco -e " $Y The installed Package Name is $N: $i "
+    echo "package to install: $i"
     dnf list installed $i &>>$LOGFILE
     if [ $? -eq 0 ]
     then 
