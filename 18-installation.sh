@@ -2,7 +2,7 @@
 
 #sudo access 
 USER_ID=$(id -u)
-if [ $? -eq 0 ]
+if [ $USER_ID -eq 0 ]
 then 
     echo -e "$G YOU ALREADY HAVE SUDO ACCESS $N"
 else
