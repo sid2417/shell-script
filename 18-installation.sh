@@ -17,6 +17,7 @@ if [ $USER_ID -eq 0 ]
     echo "YOU ALREADY HAVE SUDO ACCESS"
     else
     echo "PLEASE PROVIDE SUDO ACCESS"
+    exit 1
 fi
 
 for i in $@
@@ -39,6 +40,7 @@ VALIDATE ()
         echo "$2 SUCCESSFULLY INSTALLED"
     else
         echo "$2 INSTALLATION WAS FAILED"
+        exit 1
     fi
 }
 
