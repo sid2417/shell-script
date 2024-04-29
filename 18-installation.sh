@@ -11,6 +11,14 @@ TIME_STAMP=$(date +%F-%H-%M-%S)
 SCRIPT_NAME=$(echo "$0" | cut -d "." -f1)
 LOG_FILE=/tmp/$TIME_STAMP-$LOG_FILE.log
 
+USER_ID=$(id -u)
+if [ $? -eq 0 ]
+    then 
+    echo "YOU ALREADY HAVE SUDO ACCESS"
+    else
+    echo "PLEASE PROVIDE SUDO ACCESS"
+fi
+
 for i in $@
 do 
     ehco "The installed Package Name is : $i"
